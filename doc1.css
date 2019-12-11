@@ -1,0 +1,97 @@
+/* spezielle Anpassungen */
+
+body {
+   font-family: "Roboto Condensed";
+   font-size: 10pt;
+   line-height: 14pt;
+}
+
+table {
+   table-layout: fixed;
+   width: 100%;
+}
+tr:nth-of-type(even) {
+  background-color:inherit;
+}
+td, th {
+   border: 1px solid lightgray;
+}
+
+th p, td p {
+   margin-top: 0;
+   margin-bottom: 0;
+}
+
+h1 {
+   page-break-before: avoid;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   font-family: "Roboto Condensed";
+}
+
+h1 {
+   font-size: 1.5em;
+}
+h2 {
+   font-size: 1.3em;
+}
+h3 {
+   font-size: 1.1em;
+}
+
+h4, h5, h6 {
+   font-size: 1em;
+}
+
+li {
+   line-height: 14pt;
+}
+
+.figure img {
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+   width: 18cm;
+}
+
+.tl-content {
+   font-family: "Roboto Condensed";
+   font-size: 8pt;
+   line-height: 10pt;
+}
+.tm-content {
+   font-family: "Roboto Condensed";
+   font-size: 10pt;
+   line-height: 12pt;
+}
+.tr-content {
+   font-family: "Roboto Condensed";
+   font-size: 8pt;
+   line-height: 10pt;
+}
+
+p {
+   text-align: justify;
+   -moz-hyphens: auto;
+   -o-hyphens: auto;
+   -webkit-hyphens: auto;
+   -ms-hyphens: auto;
+   hyphens: auto;
+   hyphenate-limit-chars: auto 3;
+   hyphenate-limit-lines: 2;
+   prince-hyphenate-before: 3;
+   prince-hyphenate-after: 3;
+   prince-hyphenate-lines: 2;
+}
+
+code {
+   font-family: monospace;
+}
+
+pre.sourceCode code {
+   border: none;
+   background-color: inherit;
+}
+
+/* EOF */
