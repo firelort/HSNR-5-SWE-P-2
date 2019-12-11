@@ -1,15 +1,15 @@
 ---
 author:
-   name1: {Name1, Vorname1, Matrikelnr. 1}
-   name2: {Name2, Vorname2, Matrikelnr. 2}
+   name1: Hartings, Rrobert, 1164453
+   name2: Niersmann, Alexander, 1164424
 title:
    main: Software EngineeringWS 2019/2020
-   sub1: Praktikum Gruppe {??}
+   sub1: Praktikum Gruppe D
    sub2: Systementwurf
 revision:
-   doc: {Dateiname}
-   level: {Versionsnummer, ab 0}
-   date: {Datum der Gültigkeit der Version TT.MM.JJJJ}
+   doc: hartings_niersmann.p2.000.md
+   level: 0
+   date: 11.12.2019
 lang: de
 cssextra: doc1.css
 ---

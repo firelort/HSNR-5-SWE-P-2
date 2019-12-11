@@ -1,0 +1,35 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLGeneric</id><coordinates><x>210</x><y>250</y><w>870</w><h>260</h></coordinates><panel_attributes>symbol=component
+                Applikationslogik</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>650</x><y>390</y><w>200</w><h>60</h></coordinates><panel_attributes>symbol=component
+Absolventen-
+feierverwaltung</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>440</x><y>390</y><w>200</w><h>60</h></coordinates><panel_attributes>symbol=component
+Registierung /
+Login</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>230</x><y>390</y><w>200</w><h>60</h></coordinates><panel_attributes>symbol=component
+Teilnahmestatus</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>860</x><y>390</y><w>200</w><h>60</h></coordinates><panel_attributes>symbol=component
+UI Rendering</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>210</y><w>80</w><h>200</h></coordinates><panel_attributes>lt=()-
+Anlegen</panel_attributes><additional_attributes>10;10;10;180</additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>440</y><w>120</w><h>110</h></coordinates><panel_attributes>lt=)-
+Daten
+festschreiben</panel_attributes><additional_attributes>20;80;20;10</additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>210</y><w>90</w><h>200</h></coordinates><panel_attributes>lt=()-
+Teilnahme-
+bekunden</panel_attributes><additional_attributes>10;10;10;180</additional_attributes></element><element><id>Relation</id><coordinates><x>780</x><y>210</y><w>90</w><h>200</h></coordinates><panel_attributes>lt=()-
+Bearbeiten</panel_attributes><additional_attributes>10;10;10;180</additional_attributes></element><element><id>Relation</id><coordinates><x>950</x><y>210</y><w>130</w><h>200</h></coordinates><panel_attributes>lt=()-
+Bereitstellung UI
+inkl. Daten</panel_attributes><additional_attributes>10;10;10;180</additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>210</y><w>70</w><h>200</h></coordinates><panel_attributes>lt=()-
+Status
+ändern</panel_attributes><additional_attributes>10;10;10;180</additional_attributes></element><element><id>Relation</id><coordinates><x>540</x><y>210</y><w>80</w><h>200</h></coordinates><panel_attributes>lt=()-
+Login am
+AFS</panel_attributes><additional_attributes>10;10;10;180</additional_attributes></element><element><id>Relation</id><coordinates><x>440</x><y>210</y><w>110</w><h>200</h></coordinates><panel_attributes>lt=()-
+Registrierung
+am AFS</panel_attributes><additional_attributes>10;10;10;180</additional_attributes></element><element><id>Relation</id><coordinates><x>610</x><y>210</y><w>80</w><h>200</h></coordinates><panel_attributes>lt=()-
+Passwort
+setzen</panel_attributes><additional_attributes>10;10;10;180</additional_attributes></element><element><id>Relation</id><coordinates><x>370</x><y>210</y><w>80</w><h>200</h></coordinates><panel_attributes>lt=()-
+Anzahl
+Begeleit-
+personen
+ändern</panel_attributes><additional_attributes>10;10;10;180</additional_attributes></element><element><id>Relation</id><coordinates><x>520</x><y>440</y><w>120</w><h>110</h></coordinates><panel_attributes>lt=)-
+Nutzerdaten
+festschreiben</panel_attributes><additional_attributes>20;80;20;10</additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>440</y><w>120</w><h>110</h></coordinates><panel_attributes>lt=)-
+Daten
+festschreiben</panel_attributes><additional_attributes>20;80;20;10</additional_attributes></element><element><id>Relation</id><coordinates><x>940</x><y>440</y><w>90</w><h>110</h></coordinates><panel_attributes>lt=)-
+Daten
+abfragen
+</panel_attributes><additional_attributes>20;80;20;10</additional_attributes></element></diagram>
