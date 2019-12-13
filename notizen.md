@@ -30,11 +30,3 @@ BITTE BEDENKEN
     
 * Darstellungslayer
     * Browser
-    
-    
-    
-## Korrektur des ersten Ausarbeitung
-
-* Use-Case 
-    * Registierung nur für Berechtigte
-    * Prüfungsausschussmitglieder löschen
