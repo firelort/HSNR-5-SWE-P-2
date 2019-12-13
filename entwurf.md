@@ -22,17 +22,23 @@ _Geben Sie kurz an, welche grundsätzliche Systemarchitektur verwendet wird._
 
 ## Komponentendiagramm
 
-_Geben Sie hier das Komponentendiagramm an und erläutern Sie die Zusammenhänge._
-
 ### Übersicht
 
 ![[1] Übersicht UML-Komponenten-Diagramm für Absolventenfeiersystem](übersicht-komponenten.png "Übersicht über die Komponenten")
 
+Die Benutzungsschnittstelle greift auf Funktionen der Applikationslogik zu um Daten an die Applikation zu senden.
+Desweitern erfolgt das Rendern der HTML-Seite auf dem Server, sodass der Client/Web-Browser auch auf diese Funktionalität
+zugreift.
 
+Die Applikationslogik wiederrum, benötigt für das Speichern sowie für das Abrufen von Informationen/Daten die Persistenzschicht.
+Die Persistenzsicht dient als Mediator zwischen Applikationslogik und Datenbank (MongoDB).
 
 ### Applikationslogik verfeinert
 
 ![[2] Applikationslogik UML-Komponenten-Diagramm für Absolventenfeiersystem](app-komponenten.png "Übersicht über die Applikationslogik")
+
+Die Applikationslogik ist im oberen Bild verfeinert, da diese in der Übersicht nur grob eingezeicht ist. Die vier verschiedenen
+Komponenten bieten verschiedene Export- und Import-Schittstellen an, welche im folgenden genauer erklärt werden.
 
 ## Komponenten
 
