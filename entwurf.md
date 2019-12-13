@@ -16,7 +16,11 @@ cssextra: doc1.css
 
 # Allgemeine Beschreibung
 
-_Geben Sie kurz an, welche grundsätzliche Systemarchitektur verwendet wird._
+Das Absolventenfeiersystem kurz AFS nutzt eine Server-Client-Architektur. Bei dem Client handelt es sich um ein Thin-Client,
+da das Rendering der Darstellungen auf dem Server durchgeführt wird. Da es sich um eine Webapplikation handelt, ist der 
+genutze Client ein Webbrowser. Über diesen werden die Nutzerinteraktionen an den Server gesendet. Die Peristierung wird 
+von einer Persistierungsschnitstelle im Zusammenspiel mit mongoDB durchgeführt. Die Absolventendaten werden über einen
+Adapter von Prüfungsamt bezogen.
 
 # Systemstruktur
 
@@ -259,9 +263,9 @@ Der Query-Manager ermöglicht es SQL Datenbank abfragen auszuführen.
 
 Der Object-Pool verwaltet die Objekte welche in der Datenbank vorhanden sind bzw. welche in die Datenbank geschrieben werden sollen.
 
-#### Object2BSON
+#### Object2JSON
 
-Diese Komponente wandelt die von der Applikation übergebenden Daten in das von der MongoDB genutzte Datenformat BSON um.
+Diese Komponente wandelt die von der Applikation übergebenden Objekte in das JSON Format aus.
 
 #### Adapter (technisch)
 
@@ -299,4 +303,9 @@ _Geben Sie hier an, wie das Klassenmodell auf Container und Referenzen zwischen 
 
 ## Verwendung von Entwufsmustern
 
-_Beschreiben Sie hier die verwendeten Entwurfsmuster._
+### Singelton
+
+Die Applikationslogik soll nur über einen Pool von Verbindungen zur Datenbank verfügen.
+Hierzu wird das Entwurfsmuster Singelton genutzt.
+
+### Adapter
