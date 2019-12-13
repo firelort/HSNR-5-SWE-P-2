@@ -4,7 +4,7 @@ Absolventen-
 feierverwaltung</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>440</x><y>390</y><w>200</w><h>60</h></coordinates><panel_attributes>symbol=component
 Registierung /
 Login</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>230</x><y>390</y><w>200</w><h>60</h></coordinates><panel_attributes>symbol=component
-Teilnahmestatus</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>860</x><y>390</y><w>200</w><h>60</h></coordinates><panel_attributes>symbol=component
+Teilnahmebekundung</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>860</x><y>390</y><w>200</w><h>60</h></coordinates><panel_attributes>symbol=component
 UI Rendering</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>210</y><w>80</w><h>200</h></coordinates><panel_attributes>lt=()-
 Anlegen</panel_attributes><additional_attributes>10;10;10;180</additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>440</y><w>120</w><h>110</h></coordinates><panel_attributes>lt=)-
 Daten
@@ -23,7 +23,7 @@ am AFS</panel_attributes><additional_attributes>10;10;10;180</additional_attribu
 Passwort
 setzen</panel_attributes><additional_attributes>10;10;10;180</additional_attributes></element><element><id>Relation</id><coordinates><x>370</x><y>210</y><w>80</w><h>200</h></coordinates><panel_attributes>lt=()-
 Anzahl
-Begeleit-
+Begleit-
 personen
 ändern</panel_attributes><additional_attributes>10;10;10;180</additional_attributes></element><element><id>Relation</id><coordinates><x>520</x><y>440</y><w>120</w><h>110</h></coordinates><panel_attributes>lt=)-
 Nutzerdaten
