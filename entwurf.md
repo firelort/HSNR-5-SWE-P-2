@@ -237,7 +237,7 @@ Diese Komponete umfasst ein server seitiges rendern der Ansicht, sowie eine Ausl
 Die Export-Schnittstelle liefert dem Browser/Client eine gerenderte HTML-Seite mit Informationen aus der Datenbank,
 sofern diese benötigt werden.
 
-**Datenstruktur:**_Auslieferung einer HTML/CSS-Seite_
+**Datenstruktur:** Auslieferung einer HTML/CSS-Seite
 
 ##### Import-Schittstelle
 
@@ -271,7 +271,13 @@ Der Adapter ermöglicht es die umgewandelten Daten in der MongoDB Datenbank abzu
 
 #### Datenbank - MongoDB
 
+Die Datenbank erhält von der Persistenzsicht Daten, welche abgespeichert werden sollen. Desweitern gibt die Datenbank
+Daten auf Anforderung Daten an die Persistenzsicht.
+
 #### Adapter - Daten ders Prüfungsamts
+
+Diese Komponente stellt einen Adapter für die benötigten Daten des Prüfungsamtes dar, sodass nur benötigte Daten an die
+Persistenzschicht weiter gegeben werden.
 
 ## Benutzungsschnittstelle
 
