@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <title>Software EngineeringWS 2019/2020</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+  /* hdoc_pdf.css */
+
+  @page {
+     size: A4 portrait;
+     margin-top: 2.5cm;
+     margin-left: 1.5cm;
+     margin-right: 1.5cm;
+     margin-bottom: 2cm;
+     padding: 0cm;
+
+    @top-left {
+      content: flow(tl-content-flow);
+      vertical-align: bottom;
+      margin-bottom: 0.5cm;
+      padding-bottom:0.1cm;
+      font-family: "Roboto Condensed", sans-serif;
+      border-bottom:1px solid gray;
+    }
+
+    @top-center {
+      content: flow(tm-content-flow);
+      vertical-align: bottom;
+      margin-bottom: 0.5cm;
+      padding-bottom:0.1cm;
+      font-family: "Roboto Condensed", sans-serif;
+      border-bottom:1px solid gray;
+    }
+
+    @top-right {
+      content: flow(tr-content-flow);
+      font-size:8pt; /*1em;*/
+      text-align:right;
+      vertical-align: bottom;
+      margin-bottom: 0.5cm;
+      padding-bottom:0.1cm;
+      font-family: "Roboto Condensed", sans-serif;
+      border-bottom:1px solid gray;
+    }
+
+    @bottom-center {
+      font-size:8pt; /*1em;*/
+      text-align:center;
+      vertical-align: top;
+      margin-top: 0.5cm;
+      padding-top:0.1cm;
+      font-family: "Roboto Condensed", sans-serif;
+    }
+  }
+  .tl-content {
+      flow: static(tl-content-flow);
+      width:5cm;
+      font-size:8pt; /*1em;*/
+      text-align:left;
+  }
+
+  .tm-content {
+      flow: static(tm-content-flow);
+      width:8cm;
+      font-size:10pt;
+      text-align:center;
+  }
+
+  .tr-content {
+     /*display: none;*/
+     flow: static(tr-content-flow);
+     width:5cm;
+     font-size:8pt; /*1em;*/
+     text-align:right;
+  }
+
+  .tr-page {
+     content: "Seite " counter(page) " von " counter(pages);
+  }
+  body {
+     font-family: "Roboto", "Roboto Condensed", sans-serif;
+     font-size:10pt; /*1em;*/
+  }
+
+  code {
+     font-family: "LettrGoth12 BT", monospace;
+     font-size:1em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+     font-family: "Roboto Condensed", sans-serif;
+     page-break-after: avoid;
+  }
+
+  h1 {
+     page-break-before: auto;
+  }
+
+  h1.clDocPartHeader {
+     padding-bottom: 5px;
+     border-bottom: 2px solid;
+  }
+
+  h1.clDocPartHeader {
+     page-break-before: always;
+  }
+
+  h1.clDocPartHeader:first-of-type {
+     page-break-before: avoid;
+  }
+
+  h1.clDocPartHeader + h1 {
+     page-break-before: avoid;
+  }
+
+  figure {
+     margin-left: auto;
+     margin-right: auto;
+     text-align: center;
+  }
+
+  figure img {
+     width: 15cm;
+  }
+
+  table {
+     border: 1px solid #AAAAAA;
+     border-collapse: collapse;
+     caption-side: bottom;
+     margin-left: auto;
+     margin-right: auto;
+  }
+
+  caption {
+     margin-top: 0.1cm;
+  }
+
+  th, td {
+     padding: 0.2cm;
+     border: 1px solid #AAAAAA;
+  }
+
+  p {
+     text-align: justify;
+     -moz-hyphens: auto;
+     -o-hyphens: auto;
+     -webkit-hyphens: auto;
+     -ms-hyphens: auto;
+     hyphens: auto;    
+     hyphenate-limit-chars: auto 3;
+     hyphenate-limit-lines: 2;    
+     prince-hyphenate-before: 3;
+     prince-hyphenate-after: 3;
+     prince-hyphenate-lines: 2;    
+  }
+
+  p + ul {
+    margin-top: -10px;
+  }
+
+  td.lineNumbers {
+    width: 5%;
+  }
+
+  ul {
+     margin-left: 0;
+     padding-left: 1.5em;
+  }
+
+  ol {
+     margin-left: 0;
+     padding-left: 2em;
+  }
+
+  blockquote {
+     margin-left: 0;
+     padding-left: 1.5em;
+  }
+
+  /* EOF */
+  </style>
+  <style type="text/css">
+  /* Syntax-Markierung */
+
+  pre {
+      /*background-color: #FDF6E3;*/
+      font-family: "LettrGoth12 BT", monospace;
+      font-size: 1.0em;
+      line-height: 1.1em;
+  }
+
+  .sourceCode {
+      font-family: "LettrGoth12 BT", monospace;
+      font-size: 1.0em;
+      line-height: 1.1em;
+  }
+
+  @media print {
+     pre {
+         font-size: 9pt;
+         line-height: 12pt;
+     }
+
+     .sourceCode {
+         font-size: 9pt;
+         line-height: 12pt;
+     }
+
+     tr.sourceCode {
+        border: 1px solid lightgray;
+     }
+
+  }
+
+  .sourceCode tr:nth-of-type(odd) {
+     background-color: transparent;
+  }
+
+  /* KeyWordTok */
+  .sourceCode .kw { color: #268BD2; }
+  /* DataTypeTok */
+  .sourceCode .dt { color: #268BD2; }
+
+  /* DecValTok (decimal value), BaseNTok, FloatTok
+  .sourceCode .dv, .sourceCode .bn, .sourceCode .fl { color: #D33682; }
+  /* CharTok */
+  .sourceCode .ch { color: #DC322F; }
+  /* StringTok */
+  .sourceCode .st { color: #2AA198; }
+  /* CommentTok */
+  .sourceCode .co { color: #93A1A1; }
+  /* OtherTok */
+  .sourceCode .ot { color: #A57800; }
+  /* AlertTok */
+  .sourceCode .al { color: #CB4B16; font-weight: bold; }
+  /* FunctionTok */
+  .sourceCode .fu { color: #268BD2; }
+  /* RegionMarkerTok */
+  .sourceCode .re { }
+
+  /* EOF */
+  </style>
+  <link rel="stylesheet" href="assets/doc1.css" />
+</head>
+<body>
+<p class="tl-content">
+Hartings, Rrobert, 1164453<br/>Niersmann, Alexander, 1164424
+</p>
+<p class="tm-content">
+Software EngineeringWS 2019/2020<br/>Praktikum Gruppe D<br/>Systementwurf
+</p>
+<p class="tr-content">
+hartings_niersmann.p2.000.md<br/>rev. 0 / 11.12.2019<br/><span class="tr-page"></span>
+</p> 
+<h1 data-number="1" id="allgemeine-beschreibung"><span class="header-section-number">1</span> Allgemeine Beschreibung</h1>
+<p>Das Absolventenfeiersystem kurz AFS nutzt eine Server-Client-Architektur. Bei dem Client handelt es sich um ein Thin-Client, da das Rendering der Darstellungen auf dem Server durchgeführt wird. Da es sich um eine Webapplikation handelt, ist der genutze Client ein Webbrowser. Über diesen werden die Nutzerinteraktionen an den Server gesendet. Die Peristierung wird von einer Persistierungsschnitstelle im Zusammenspiel mit mongoDB durchgeführt. Die Absolventendaten werden über einen Adapter von Prüfungsamt bezogen.</p>
+<h1 data-number="2" id="systemstruktur"><span class="header-section-number">2</span> Systemstruktur</h1>
+<h2 data-number="2.1" id="komponentendiagramm"><span class="header-section-number">2.1</span> Komponentendiagramm</h2>
+<h3 data-number="2.1.1" id="übersicht"><span class="header-section-number">2.1.1</span> Übersicht</h3>
+<figure>
+<img src="images/uml/übersicht-komponenten.png" title="Übersicht über die Komponenten" alt="" /><figcaption>[1] Übersicht UML-Komponenten-Diagramm für Absolventenfeiersystem</figcaption>
+</figure>
+<p>Die Benutzungsschnittstelle greift auf Funktionen der Applikationslogik zu um Daten an die Applikation zu senden. Desweitern erfolgt das Rendern der HTML-Seite auf dem Server, sodass der Client/Web-Browser auch auf diese Funktionalität zugreift.</p>
+<p>Die Applikationslogik wiederrum, benötigt für das Speichern sowie für das Abrufen von Informationen/Daten die Persistenzschicht. Die Persistenzsicht dient als Mediator zwischen Applikationslogik und Datenbank (MongoDB).</p>
+<h3 data-number="2.1.2" id="applikationslogik-verfeinert"><span class="header-section-number">2.1.2</span> Applikationslogik verfeinert</h3>
+<figure>
+<img src="images/uml/app-komponenten.png" title="Übersicht über die Applikationslogik" alt="" /><figcaption>[2] Applikationslogik UML-Komponenten-Diagramm für Absolventenfeiersystem</figcaption>
+</figure>
+<p>Die Applikationslogik ist im oberen Bild verfeinert, da diese in der Übersicht nur grob eingezeicht ist. Die vier verschiedenen Komponenten bieten verschiedene Export- und Import-Schittstellen an, welche im folgenden genauer erklärt werden.</p>
+<h2 data-number="2.2" id="komponenten"><span class="header-section-number">2.2</span> Komponenten</h2>
+<h3 data-number="2.2.1" id="benutzungsschnittstelle"><span class="header-section-number">2.2.1</span> Benutzungsschnittstelle</h3>
+<h4 data-number="2.2.1.1" id="webbrowser"><span class="header-section-number">2.2.1.1</span> Webbrowser</h4>
+<p>Der Webbrowser wird genutzt, damit die Nutzer die Applikation verwenden können. Der Browser muss HTML und CSS anzeigen können. Je nach Use-Case und Benutzerrolle werden verschiedene HTML-Seiten angezeigt, welche von der Applikation gerendert worden sind. Der Webbrowser muss Formulardaten an den Server senden können.</p>
+<h5 data-number="2.2.1.1.1" id="import-schittstelle"><span class="header-section-number">2.2.1.1.1</span> Import-Schittstelle</h5>
+<h3 data-number="2.2.2" id="applikationslogik"><span class="header-section-number">2.2.2</span> Applikationslogik</h3>
+<h4 data-number="2.2.2.1" id="registierung-login"><span class="header-section-number">2.2.2.1</span> Registierung / Login</h4>
+<p>Diese Komponente ermöglicht die Registierung und Anmeldung am AFS, um so Absolventen und Mitarbeitern des Prüfungsausschuss die Möglichkeit zu geben, Daten innerhalb der Anwendung zu verwalten und zu ändern.</p>
+<h5 data-number="2.2.2.1.1" id="export-schnittstelle"><span class="header-section-number">2.2.2.1.1</span> Export-Schnittstelle</h5>
+<p>Die Komponente Registierung / Login bietet die folgenden Exportschnittstellen an: * Registierung am AFS * Login am AFS * Passwort setzen</p>
+<h6 data-number="2.2.2.1.1.1" id="registierung-am-afs"><span class="header-section-number">2.2.2.1.1.1</span> Registierung am AFS</h6>
+<p>Registierung am AFS bietet einem Mitarbeiter des Fachbreiches(Prüfungsausschus) die Möglichkeit Zugangsdaten am AFS zu hinterlegen, um so im Zugriff auf das Backend des AFS zu erhalten. Dies Funktion darf nur von Berechtigten, also Mitgliedern des Prüfungsauschuss genutzt werden.</p>
+<p><strong>Datenstruktur:</strong></p>
+<p>new_login ::= #email + passwort;<br />
+email ::= string;<br />
+passwort ::= string;</p>
+<h6 data-number="2.2.2.1.1.2" id="login-am-afs"><span class="header-section-number">2.2.2.1.1.2</span> Login am AFS</h6>
+<p>Der Login am AFS ermöglicht den Absolventen und den Mitarbeitern des Prüfungsausschusses sich am AFS an zu melden, um so Funktionen der Rolle wahr zunehmen.</p>
+<p><strong>Datenstruktur:</strong></p>
+<p>login ::= #email + passwort;<br />
+email ::= string;<br />
+passwort ::= string;</p>
+<h6 data-number="2.2.2.1.1.3" id="passwort-setzen"><span class="header-section-number">2.2.2.1.1.3</span> Passwort setzen</h6>
+<p>Absolventen ohne Nutzeraccount müssen vor Nutzung des AFS ein Passwort festlegen, damit diese Möglich ist, exportiert die Registierung/Login Komponente die Möglichkeit ein Passwort zu vergeben. Nach dem ein Passwort vergeben worden ist, kann der Absolvent das AFS nutzen.</p>
+<p><strong>Datenstruktur:</strong></p>
+<p>new_login ::= #email + passwort;<br />
+email ::= string;<br />
+passwort ::= string;</p>
+<h5 data-number="2.2.2.1.2" id="import-schnittstelle"><span class="header-section-number">2.2.2.1.2</span> Import-Schnittstelle</h5>
+<h6 data-number="2.2.2.1.2.1" id="nutzerdaten-festschreiben"><span class="header-section-number">2.2.2.1.2.1</span> Nutzerdaten festschreiben</h6>
+<p>Das Festschreiben der Nutzerdaten wird aus der Peristenzsicht importiert, um das Abspeichern von Daten zu ermöglichen. Die Daten umfassen die Nutzereingaben, welche durch die Export-Schnittstellen an die Komponente gesandet werden können. Die Aktionen auf der Datenbank ist entweder eine Abfrage oder ein Einfügen.</p>
+<p><strong>Datenstruktur:</strong></p>
+<p>login ::= #email + passwort;<br />
+email ::= string;<br />
+passwort ::= string;</p>
+<h4 data-number="2.2.2.2" id="teilnahmebekundung"><span class="header-section-number">2.2.2.2</span> Teilnahmebekundung</h4>
+<p>Diese Komponente ermöglicht den Benutzern eine Anmeldung für die Absolventenfeier auszusprechen. Desweitern ermöglicht die Komponente Absolventen die Anzahl der Begleitpersonen sowie ihre Zusage zu ändern.</p>
+<h5 data-number="2.2.2.2.1" id="export-schnittstelle-1"><span class="header-section-number">2.2.2.2.1</span> Export-Schnittstelle</h5>
+<p>Die Komponente Teilnahmebekundung bietet die folgenden Exportschnittstellen an: * Teilnahmebekunden * Status ändern * Anzahl Begleitpersonen ändern</p>
+<h6 data-number="2.2.2.2.1.1" id="teilnahmebekunden"><span class="header-section-number">2.2.2.2.1.1</span> Teilnahmebekunden</h6>
+<p>Diese Export-Schnittstelle bitet den Mitarbeitern des Fachbereichs die Möglichekeit ihr kommen zur Absolventenfeier anzumelden.</p>
+<p><strong>Datenstruktur:</strong></p>
+<p>login ::= #email + name + vorname;</p>
+<p>email ::= string;<br />
+name ::= string;<br />
+vorname ::= string;</p>
+<h6 data-number="2.2.2.2.1.2" id="status-ändern"><span class="header-section-number">2.2.2.2.1.2</span> Status ändern</h6>
+<p>Durch diese Export-Schnittstelle, ist es dem Absolventen möglich, sein kommen anzumelden bzw. zu wiederrufen.</p>
+<p><strong>Datenstruktur:</strong></p>
+<p>login ::= #email + name + teilnahmestatus;</p>
+<p>teilnahmestatus ::= boolean;</p>
+<h6 data-number="2.2.2.2.1.3" id="anzahl-begleitpersonen-ändern"><span class="header-section-number">2.2.2.2.1.3</span> Anzahl Begleitpersonen ändern</h6>
+<p>Diese Export-Schnittstelle ermöglicht es den Absolventen, die Anzahl an Begleitpersonen, welche diesen zur Absolventefeier begleiten zu ändern.</p>
+<p><strong>Datenstruktur:</strong></p>
+<p>login ::= #email + name + anzahl;</p>
+<p>anzahl ::= number;</p>
+<h5 data-number="2.2.2.2.2" id="import-schnittstelle-1"><span class="header-section-number">2.2.2.2.2</span> Import-Schnittstelle</h5>
+<h6 data-number="2.2.2.2.2.1" id="daten-festschreiben"><span class="header-section-number">2.2.2.2.2.1</span> Daten festschreiben</h6>
+<p>Das Festschreiben der Daten wird aus der Peristenzsicht importiert, um das Abspeichern von Daten zu ermöglichen. Die Daten umfassen die Nutzereingaben, welche durch die Export-Schnittstellen an die Komponente gesandet werden können. Die Aktionen auf der Datenbank ist entweder ein Einfügen oder ein Update auf bestehende Datenbestände.</p>
+<p><strong>Datenstruktur:</strong></p>
+<p>teilnahmebekunden ::= #email + name + vorname;<br />
+status_ändern ::= #email + teilnahmestatus; anzahl_begleitpersonen ::= #email + anzahl;</p>
+<p>email ::= string;<br />
+name ::= string; vorname ::= string;<br />
+teilnahmestatus ::= boolean; anzahl ::= number;</p>
+<h4 data-number="2.2.2.3" id="absolventenfeierverwaltung"><span class="header-section-number">2.2.2.3</span> Absolventenfeierverwaltung</h4>
+<p>Die Komponente Absolventenfeierverwaltung ermöglicht es eine Absolventenfeier anzulegen bzw. diese zu bearbeiten.</p>
+<h5 data-number="2.2.2.3.1" id="export-schnittstelle-2"><span class="header-section-number">2.2.2.3.1</span> Export-Schnittstelle</h5>
+<h6 data-number="2.2.2.3.1.1" id="anlegen"><span class="header-section-number">2.2.2.3.1.1</span> Anlegen</h6>
+<p>Durch diese Exportschittstelle haben die Mitglieder des Prüfungsausschusses die Möglichkeit eine Absolventenfeier im AFS zu hinterlegen. Sollte bereits eine andere Feier angelegt sein, wird diese überschrieben.</p>
+<p><strong>Datenstruktur:</strong></p>
+<p>neue_feier ::= name + #datum + uhrzeit + ort;</p>
+<p>name ::= string;<br />
+datum ::= date;<br />
+uhrzeit ::= time;<br />
+ort ::= string;</p>
+<h6 data-number="2.2.2.3.1.2" id="bearbeiten"><span class="header-section-number">2.2.2.3.1.2</span> Bearbeiten</h6>
+<p>Durch die Exportschnittstelle “Bearbeiten” hat der Prüfungssausschuss die Möglichkeit die Daten der Absolventenfeier im AFS zu ändern.</p>
+<p><strong>Datenstruktur:</strong></p>
+<p>feier ::= name + #datum + uhrzeit + ort;</p>
+<p>name ::= string;<br />
+datum ::= date;<br />
+uhrzeit ::= time;<br />
+ort ::= string;</p>
+<h5 data-number="2.2.2.3.2" id="import-schittstelle-1"><span class="header-section-number">2.2.2.3.2</span> Import-Schittstelle</h5>
+<p>Die Import-Schnittstelle ermöglicht, das eine Erstellung einer Absolventenfeier sowie die Änderungen an einer Absolventenfeier in die Datenbank geschrieben werden und somit persistent sind.</p>
+<p><strong>Datenstruktur:</strong></p>
+<p>feier ::= name + #datum + uhrzeit + ort;</p>
+<p>name ::= string;<br />
+datum ::= date;<br />
+uhrzeit ::= time;<br />
+ort ::= string;</p>
+<h4 data-number="2.2.2.4" id="ui-rendering"><span class="header-section-number">2.2.2.4</span> UI Rendering</h4>
+<p>Diese Komponete umfasst ein server seitiges rendern der Ansicht, sowie eine Auslieferung an den Client.</p>
+<h5 data-number="2.2.2.4.1" id="export-schnittstelle-3"><span class="header-section-number">2.2.2.4.1</span> Export-Schnittstelle</h5>
+<p>Die Export-Schnittstelle liefert dem Browser/Client eine gerenderte HTML-Seite mit Informationen aus der Datenbank, sofern diese benötigt werden.</p>
+<p><strong>Datenstruktur:</strong> Auslieferung einer HTML/CSS-Seite</p>
+<h5 data-number="2.2.2.4.2" id="import-schittstelle-2"><span class="header-section-number">2.2.2.4.2</span> Import-Schittstelle</h5>
+<p>Die Import-Schnittstelle wird benötigt, damit HTML-Seiten mit unter anderem Datenbank inhalt gerendert werden können.</p>
+<p><strong>Datenstruktur:</strong> Abhängig von der angeforderten Seite</p>
+<h3 data-number="2.2.3" id="persistenzschicht"><span class="header-section-number">2.2.3</span> Persistenzschicht</h3>
+<p>Die Persistenzsicht hat die folgenden Aufgaben: Sie kümmert sich um das Transofmieren der Daten in eines für die Datenbank nutzbares Format. Desweitern ermöglicht diese, SQL Abfragen auf vorhandene Daten. Neben diesem stellt die Persitenźsicht auch eine Möglichtkeit bereit mit Hilfe eines Adapters auf die benötigten Daten des Prüfungsamtes zuzugreifen</p>
+<h4 data-number="2.2.3.1" id="query-manager"><span class="header-section-number">2.2.3.1</span> Query-Manager</h4>
+<p>Der Query-Manager ermöglicht es SQL Datenbank abfragen auszuführen.</p>
+<h4 data-number="2.2.3.2" id="object-pool"><span class="header-section-number">2.2.3.2</span> Object-Pool</h4>
+<p>Der Object-Pool verwaltet die Objekte welche in der Datenbank vorhanden sind bzw. welche in die Datenbank geschrieben werden sollen.</p>
+<h4 data-number="2.2.3.3" id="object2json"><span class="header-section-number">2.2.3.3</span> Object2JSON</h4>
+<p>Diese Komponente wandelt die von der Applikation übergebenden Objekte in das JSON Format aus.</p>
+<h4 data-number="2.2.3.4" id="adapter-technisch"><span class="header-section-number">2.2.3.4</span> Adapter (technisch)</h4>
+<p>Der Adapter ermöglicht es die umgewandelten Daten in der MongoDB Datenbank abzuspeichern.</p>
+<h3 data-number="2.2.4" id="weiters"><span class="header-section-number">2.2.4</span> Weiters</h3>
+<h4 data-number="2.2.4.1" id="datenbank---mongodb"><span class="header-section-number">2.2.4.1</span> Datenbank - MongoDB</h4>
+<p>Die Datenbank erhält von der Persistenzsicht Daten, welche abgespeichert werden sollen. Desweitern gibt die Datenbank Daten auf Anforderung Daten an die Persistenzsicht.</p>
+<h4 data-number="2.2.4.2" id="adapter---daten-ders-prüfungsamts"><span class="header-section-number">2.2.4.2</span> Adapter - Daten ders Prüfungsamts</h4>
+<p>Diese Komponente stellt einen Adapter für die benötigten Daten des Prüfungsamtes dar, sodass nur benötigte Daten an die Persistenzschicht weiter gegeben werden.</p>
+<h2 data-number="2.3" id="benutzungsschnittstelle-1"><span class="header-section-number">2.3</span> Benutzungsschnittstelle</h2>
+<p>In den folgenen Frames steht “Benutzername” als Platzhalter für den für den Namen des angemeldeten Nutzers, “Absolventenfeier” steht für den Namen der aktuellen Feier. LOGO/TITLE im AFS werden durch das Logo bzw einen stellvertretenden Text ersetzt.</p>
+<figure>
+<img src="images/wireframes/login_step_1.png" title="Login-Maske" alt="" /><figcaption>[3] Login-Maske für alle Benutzer/Teilnehmer</figcaption>
+</figure>
+<p>Diese Maske wird als globaler Login genutzt, jenachdem welche Email-Adresse eingegeben wird, wird die nächste Eingabe Maske angezeigt. Dort wird unterschieden zwischen Mitarbeiter und Absolventen.</p>
+<figure>
+<img src="images/wireframes/login_step_2_password_not_set_student.png" title="Passwort-Maske" alt="" /><figcaption>[4] Maske zum Setzen eines Passwortes für Absolventen</figcaption>
+</figure>
+<p>Wenn der Absolvent noch kein Password für seine Email gesetzt hat, muss er das in dieser Maske tun.</p>
+<figure>
+<img src="images/wireframes/login_step_2_password_already_set_student.png" title="Passwort-Maske" alt="" /><figcaption>[5] Maske zur Eingabe des Passwortes für Absolventen</figcaption>
+</figure>
+<p>Wenn ein Passwort für den Absolventen hinterlegt ist, kann dieser sich damit in dieser Maske anzumelden.</p>
+<figure>
+<img src="images/wireframes/participate_not_participating.png" title="Maske zur Teilnahmebekundung - Absolventen" alt="" /><figcaption>[6] Maske zur Bekundung der Teilnahme für Absolventen</figcaption>
+</figure>
+<p>Nach dem erfolgreichen Login besteht die Möglichkeit die Teilnahme an der Absolventenfeier zu bekunden und die Anzahl der Begleitpersonen anzugeben.</p>
+<figure>
+<img src="images/wireframes/participate_participating.png" title="Maske zur Teilnahmebekundung - Absolventen" alt="" /><figcaption>[7] Maske zur Stornierung der Teilnahme für Absolventen und Änderungen der Anzahl der Begleitpersonen</figcaption>
+</figure>
+<p>Nach Bekundung der Teilnahme steht Absolventen nach dem Login die Möglichkeit zur Verfügung die Anzahl der Begleitpersonen zu ändern oder die Teilnahme zu stornieren.</p>
+<figure>
+<img src="images/wireframes/login_step_2_account_not_set_not_participating_worker.png" title="Maske zur Teilnahmebekundung/Registrierung am AFS - Mitarbeiter" alt="" /><figcaption>[8] Maske zur Bekundung der Teilnahme für Mitarbeiter, sowie Registrierung für Mitarbeiter am AFS</figcaption>
+</figure>
+<p>Wenn ein Mitarbeiter sich weder am AFS angemeldet hat, noch seine Teilnahme zur Absolventenfeier bekundet hat kann er diese Vorgänge in dieser Maske vollenden.</p>
+<figure>
+<img src="images/wireframes/login_step_2_account_not_set_participating_worker.png" title="Maske zur Teilnahmebekundung/Registrierung am AFS - Mitarbeiter" alt="" /><figcaption>[9] Status zur Teilnahme, sowie Registrierung für Mitarbeiter am AFS</figcaption>
+</figure>
+<p>Falls noch kein AFS-Account besteht aber die Teilnahme bereits bekundet wurde, wird die Maske zur Bekundung durch einen Statustext ersetzt.</p>
+<figure>
+<img src="images/wireframes/login_step_2_account_set_not_participating_worker.png" title="Maske zur Teilnahmebekundung sowie Login - Mitarbeiter" alt="" /><figcaption>[10] Maske zur Bekundung der Teilnahme für Mitarbeiter und Login zum AFS</figcaption>
+</figure>
+<p>Besteht bereits ein Account, wird die Registrierung mit einem Login getauscht, bei Nicht-Teilnahme wird zusätzlich die Maske zur Teilnahmebekundung angezeigt.</p>
+<figure>
+<img src="images/wireframes/login_step_2_account_set_participating_worker.png" title="Status zur Teilnahmebekundung sowie Login - Mitarbeiter" alt="" /><figcaption>[11] Status zur Teilnahme, sowie Login zum AFS</figcaption>
+</figure>
+<p>Bei bestehen Account und bekundeter Teilnahme wird die Loginmaske angezeigt und der Status der Teilnahme.</p>
+<figure>
+<img src="images/wireframes/dashboard/template.png" title="Template AFS" alt="" /><figcaption>[12] Template für das AFS</figcaption>
+</figure>
+<p>Dieses Template wird für jede Unterseite des AFS benutzt, welche sich im passwortgeschützten Bereich befindet. Ein Klick auf den Benutzernamen öffnet ein Untermenü, das die Option zur Abmeldung beinhaltet.</p>
+<figure>
+<img src="images/wireframes/dashboard/gc_createedit.png" title="Maske der Absolventenfeier" alt="" /><figcaption>[13] Maske zur Erstellung/Änderungen der Absolventenfeier</figcaption>
+</figure>
+<p>Die Maske zur Bearbeitung und Erstellung einer neuen Absolventenfeier ist identisch bisauf die Begriffe “anlegen” und “bearbeiten” werden entsprechend getauscht. Falls eine Absolventenfeier bearbeitet wird sind die Felder vorbelegt mit den vorhandenen Daten.</p>
+<figure>
+<img src="images/wireframes/dashboard/user.png" title="Tabelle der Benutzer" alt="" /><figcaption>[14] Tabelle zur Betrachtung der Mitglieder des Prüfungsausschusses mit der Option der Löschung</figcaption>
+</figure>
+<p>Eine Übersicht der registrierten Benutzer des AFS, diese Mitglieder können gelöscht werden bei Bedarf.</p>
+<figure>
+<img src="images/wireframes/dashboard/thesis_.png" title="Tabelle der Abschlussarbeiten" alt="" /><figcaption>[15] Tabelle zur Betrachtung der Abschlussarbeiten, sortierbar</figcaption>
+</figure>
+<p>Übersicht der Abschlussarbeiten, die Kombobox ermöglicht den Wechsel der Sortierung.</p>
+<figure>
+<img src="images/wireframes/dashboard/participants_students.png" title="Tabelle der Teilnehmer - Absolventen" alt="" /><figcaption>[16] Tabelle zur Betrachtung der Teilneher - Absolventen</figcaption>
+</figure>
+<p>Übersicht der angemeldeten Absolventen.</p>
+<figure>
+<img src="images/wireframes/dashboard/participants_worker.png" title="Tabelle der Teilnehmer - Mitarbeiter" alt="" /><figcaption>[17] Tabelle zur Betrachtung der Teilneher - Mitarbeiter</figcaption>
+</figure>
+<p>Übersicht der angemelden Mitarbeiter.</p>
+<h2 data-number="2.4" id="systemverhalten"><span class="header-section-number">2.4</span> Systemverhalten</h2>
+<h3 data-number="2.4.1" id="uml-zustandsdiagramme"><span class="header-section-number">2.4.1</span> UML Zustandsdiagramme</h3>
+<h4 data-number="2.4.1.1" id="übersicht-1"><span class="header-section-number">2.4.1.1</span> Übersicht</h4>
+<figure>
+<img src="images/uml/übersicht-state.png" title="Übersicht Zustandsdiagramm" alt="" /><figcaption>[18] Übersicht UML-Zustandsdiagramm-Diagramm für Absolventenfeiersystem</figcaption>
+</figure>
+<h4 data-number="2.4.1.2" id="absolventenfeiersystem-asf"><span class="header-section-number">2.4.1.2</span> Absolventenfeiersystem (ASF)</h4>
+<figure>
+<img src="images/uml/app-state.png" title="ASF-Zustandsdiagramm" alt="" /><figcaption>[19] ASF UML-Zustandsdiagramm-Diagramm für Absolventenfeiersystem</figcaption>
+</figure>
+<h4 data-number="2.4.1.3" id="asf-backend"><span class="header-section-number">2.4.1.3</span> ASF Backend</h4>
+<figure>
+<img src="images/uml/asf-state.png" title="ASF-Backend-Zustandsdiagramm" alt="" /><figcaption>[20] ASF-Backend UML-Zustandsdiagramm-Diagramm für Absolventenfeiersystem</figcaption>
+</figure>
+<h2 data-number="2.5" id="datenbasis"><span class="header-section-number">2.5</span> Datenbasis</h2>
+<h3 data-number="2.5.1" id="klassenmodell"><span class="header-section-number">2.5.1</span> Klassenmodell</h3>
+<figure>
+<img src="images/uml/uml-classes-v2.png" title="Klassendiagramm" alt="" /><figcaption>[21] Klassendiagramm</figcaption>
+</figure>
+<h3 data-number="2.5.2" id="nutzung-mongodb"><span class="header-section-number">2.5.2</span> Nutzung MongoDB</h3>
+<p><em>Geben Sie hier an, wie das Klassenmodell auf Container und Referenzen zwischen den Containern abgebildet wird.</em></p>
+<h2 data-number="2.6" id="verwendung-von-entwufsmustern"><span class="header-section-number">2.6</span> Verwendung von Entwufsmustern</h2>
+<h3 data-number="2.6.1" id="singelton"><span class="header-section-number">2.6.1</span> Singelton</h3>
+<p>Die Applikationslogik verwednet das Entwurfsmuster Singelton um nur genau einen Pool an Verbindungen zur Datenbank herzustellen.</p>
+<h3 data-number="2.6.2" id="adapter"><span class="header-section-number">2.6.2</span> Adapter</h3>
+<p>Da die Applikationslogik Daten benötigt, welche nur in einer Datenbank des Prüfungsamtes vorhanden sind, wird hier ein Adapter benutzt. Dieser Adapter stellt die externen Daten im benötigten Format (der benötigten Klasse) bereit.</p>
+</body>
+</html>
