@@ -465,8 +465,213 @@ ort ::= string;</p>
 <figure>
 <img src="images/uml/uml-classes-v2.png" title="Klassendiagramm" alt="" /><figcaption>[21] Klassendiagramm</figcaption>
 </figure>
+<p>:(feier): Zusammenstellung Attribute</p>
+<table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 11%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Attribut</th>
+<th>Typ</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>name</td>
+<td>string</td>
+<td>Der Name der Absolventenfeier</td>
+</tr>
+<tr class="even">
+<td>datum</td>
+<td>date</td>
+<td>Das Datum der Absolventenfeier</td>
+</tr>
+<tr class="odd">
+<td>uhrzeit</td>
+<td>time</td>
+<td>Die Uhrzeit der Absolventenfeier</td>
+</tr>
+<tr class="even">
+<td>ort</td>
+<td>string</td>
+<td>Der Standort der Absolventenfeier</td>
+</tr>
+</tbody>
+</table>
+<p>:(absolventen_in): Zusammenstellung Attribute</p>
+<table>
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 10%" />
+<col style="width: 65%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Attribut</th>
+<th>Typ</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>absolventen_ex</td>
+<td>number</td>
+<td>ID des externen Datensatzes, der zu diesen Zusatzinformationen gehört</td>
+</tr>
+<tr class="even">
+<td>passwort</td>
+<td>string</td>
+<td>Passwort zur Anmeldung im ASF - Leerstring, wenn noch nicht erstellt</td>
+</tr>
+<tr class="odd">
+<td>teilnahmestatus</td>
+<td>boolean</td>
+<td>Teilnahmestatus, ob Teilnahme bestätigt</td>
+</tr>
+<tr class="even">
+<td>anzahlBegleitperson</td>
+<td>number</td>
+<td>Anzahl der Begleitpersonen des Absolventen</td>
+</tr>
+</tbody>
+</table>
+<p>:(mitarbeiter): Zusammenstellung Attribute</p>
+<table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 11%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Attribut</th>
+<th>Typ</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>name</td>
+<td>string</td>
+<td>Nachname des Mitarbeiters</td>
+</tr>
+<tr class="even">
+<td>vorname</td>
+<td>string</td>
+<td>Vorname des Mitarbeiters</td>
+</tr>
+<tr class="odd">
+<td>email</td>
+<td>string</td>
+<td>E-Mail des Mitarbeiters</td>
+</tr>
+</tbody>
+</table>
+<p>:(zugangsdaten): Zusammenstellung Attribute</p>
+<table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 11%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Attribut</th>
+<th>Typ</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>name</td>
+<td>string</td>
+<td>Nachname des Prüfungsausschussmitglieds</td>
+</tr>
+<tr class="even">
+<td>vorname</td>
+<td>string</td>
+<td>Vorname des Prüfungsausschussmitglieds</td>
+</tr>
+<tr class="odd">
+<td>email</td>
+<td>string</td>
+<td>E-Mail des Prüfungsausschussmitglieds</td>
+</tr>
+<tr class="even">
+<td>passwort</td>
+<td>string</td>
+<td>Passwort des Prüfungsausschussmitglieds</td>
+</tr>
+</tbody>
+</table>
+<p>:(absolventen_ex): Zusammenstellung Attribute</p>
+<table>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 10%" />
+<col style="width: 71%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Attribut</th>
+<th>Typ</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>name</td>
+<td>string</td>
+<td>Nachname des Absolventen</td>
+</tr>
+<tr class="even">
+<td>vorname</td>
+<td>string</td>
+<td>Vorname des Absolventen</td>
+</tr>
+<tr class="odd">
+<td>email</td>
+<td>string</td>
+<td>E-Mail des Absolventen</td>
+</tr>
+<tr class="even">
+<td>arbeitstitel</td>
+<td>string</td>
+<td>Titel der Abschlussarbeit</td>
+</tr>
+<tr class="odd">
+<td>arbeitstyp</td>
+<td>string</td>
+<td>Passwort des Prüfungsausschussmitglieds</td>
+</tr>
+<tr class="even">
+<td>pruefer1</td>
+<td>string</td>
+<td>Name des ersten Prüfers</td>
+</tr>
+<tr class="odd">
+<td>pruefer2</td>
+<td>string</td>
+<td>Name des zweiten Prüfers</td>
+</tr>
+</tbody>
+</table>
 <h3 data-number="2.5.2" id="nutzung-mongodb"><span class="header-section-number">2.5.2</span> Nutzung MongoDB</h3>
-<p><em>Geben Sie hier an, wie das Klassenmodell auf Container und Referenzen zwischen den Containern abgebildet wird.</em></p>
+<p>MongoDB speichert die Daten in JSON ab. Die Object2JSON Komponente wandelt die vorhanden Instanzen in JSON um oder die JSON zurück in Instanzen der Objekte. Die Referenzen werden erneut gesetzt.</p>
+<p>Die Felder in JSON besitzen die identsichen Namen wie die Klassen, Beispiel für ein Objekt in JSON:</p>
+<pre><code>{
+    &quot;name&quot;: &quot;Mueller&quot;,
+    &quot;vorname&quot;: &quot;Marius&quot;,
+    &quot;email&quot;: &quot;marius@mueller.de&quot;,
+    &quot;arbeitstitel&quot;: &quot;Thema 1&quot;,
+    &quot;arbeitstyp&quot;: &quot;Bachelor&quot;,
+    &quot;pruefer1&quot;: &quot;Prof A&quot;,
+    &quot;pruefer2&quot;: &quot;Prof C&quot; 
+}</code></pre>
 <h2 data-number="2.6" id="verwendung-von-entwufsmustern"><span class="header-section-number">2.6</span> Verwendung von Entwufsmustern</h2>
 <h3 data-number="2.6.1" id="singelton"><span class="header-section-number">2.6.1</span> Singelton</h3>
 <p>Die Applikationslogik verwednet das Entwurfsmuster Singelton um nur genau einen Pool an Verbindungen zur Datenbank herzustellen.</p>
