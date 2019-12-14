@@ -317,7 +317,9 @@ _Geben Sie hier an, wie das Klassenmodell auf Container und Referenzen zwischen 
 
 ### Singelton
 
-Die Applikationslogik soll nur über einen Pool von Verbindungen zur Datenbank verfügen.
-Hierzu wird das Entwurfsmuster Singelton genutzt.
+Die Applikationslogik verwednet das Entwurfsmuster Singelton um nur genau einen Pool an Verbindungen zur Datenbank herzustellen.
 
 ### Adapter
+
+Da die Applikationslogik Daten benötigt, welche nur in einer Datenbank des Prüfungsamtes vorhanden sind, wird hier ein Adapter benutzt.
+Dieser Adapter stellt die externen Daten im benötigten Format (der benötigten Klasse) bereit.
