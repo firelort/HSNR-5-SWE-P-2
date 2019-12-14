@@ -11,12 +11,16 @@ revision:
    level: 0
    date: 11.12.2019
 lang: de
-cssextra: doc1.css
+cssextra: assets/doc1.css
 ---
 
 # Allgemeine Beschreibung
 
-_Geben Sie kurz an, welche grundsätzliche Systemarchitektur verwendet wird._
+Das Absolventenfeiersystem kurz AFS nutzt eine Server-Client-Architektur. Bei dem Client handelt es sich um ein Thin-Client,
+da das Rendering der Darstellungen auf dem Server durchgeführt wird. Da es sich um eine Webapplikation handelt, ist der 
+genutze Client ein Webbrowser. Über diesen werden die Nutzerinteraktionen an den Server gesendet. Die Peristierung wird 
+von einer Persistierungsschnitstelle im Zusammenspiel mit mongoDB durchgeführt. Die Absolventendaten werden über einen
+Adapter von Prüfungsamt bezogen.
 
 # Systemstruktur
 
@@ -24,7 +28,7 @@ _Geben Sie kurz an, welche grundsätzliche Systemarchitektur verwendet wird._
 
 ### Übersicht
 
-![[1] Übersicht UML-Komponenten-Diagramm für Absolventenfeiersystem](übersicht-komponenten.png "Übersicht über die Komponenten")
+![[1] Übersicht UML-Komponenten-Diagramm für Absolventenfeiersystem](images/uml/übersicht-komponenten.png "Übersicht über die Komponenten")
 
 Die Benutzungsschnittstelle greift auf Funktionen der Applikationslogik zu um Daten an die Applikation zu senden.
 Desweitern erfolgt das Rendern der HTML-Seite auf dem Server, sodass der Client/Web-Browser auch auf diese Funktionalität
@@ -35,7 +39,7 @@ Die Persistenzsicht dient als Mediator zwischen Applikationslogik und Datenbank 
 
 ### Applikationslogik verfeinert
 
-![[2] Applikationslogik UML-Komponenten-Diagramm für Absolventenfeiersystem](app-komponenten.png "Übersicht über die Applikationslogik")
+![[2] Applikationslogik UML-Komponenten-Diagramm für Absolventenfeiersystem](images/uml/app-komponenten.png "Übersicht über die Applikationslogik")
 
 Die Applikationslogik ist im oberen Bild verfeinert, da diese in der Übersicht nur grob eingezeicht ist. Die vier verschiedenen
 Komponenten bieten verschiedene Export- und Import-Schittstellen an, welche im folgenden genauer erklärt werden.
@@ -298,9 +302,9 @@ Der Query-Manager ermöglicht es SQL Datenbank abfragen auszuführen.
 
 Der Object-Pool verwaltet die Objekte welche in der Datenbank vorhanden sind bzw. welche in die Datenbank geschrieben werden sollen.
 
-#### Object2BSON
+#### Object2JSON
 
-Diese Komponente wandelt die von der Applikation übergebenden Daten in das von der MongoDB genutzte Datenformat BSON um.
+Diese Komponente wandelt die von der Applikation übergebenden Objekte in das JSON Format aus.
 
 #### Adapter (technisch)
 
@@ -324,7 +328,19 @@ Persistenzschicht weiter gegeben werden.
 
 ## Systemverhalten
 
-_Geben Sie hier UML-Sequenz- und/oder UML-Zustands- und/oder UML-Aktivitätsdiagramme_ an.
+### UML Zustandsdiagramme
+
+#### Übersicht
+
+![[3] Übersicht UML-Zustandsdiagramm-Diagramm für Absolventenfeiersystem](images/uml/übersicht-state.png "Übersicht Zustandsdiagramm")
+
+#### Absolventenfeiersystem (ASF)
+
+![[4] ASF UML-Zustandsdiagramm-Diagramm für Absolventenfeiersystem](images/uml/app-state.png "ASF-Zustandsdiagramm")
+
+#### ASF Backend
+
+![[4] ASF-Backend UML-Zustandsdiagramm-Diagramm für Absolventenfeiersystem](images/uml/asf-state.png "ASF-Backend-Zustandsdiagramm")
 
 ## Datenbasis
 
@@ -338,4 +354,9 @@ _Geben Sie hier an, wie das Klassenmodell auf Container und Referenzen zwischen 
 
 ## Verwendung von Entwufsmustern
 
-_Beschreiben Sie hier die verwendeten Entwurfsmuster._
+### Singelton
+
+Die Applikationslogik soll nur über einen Pool von Verbindungen zur Datenbank verfügen.
+Hierzu wird das Entwurfsmuster Singelton genutzt.
+
+### Adapter

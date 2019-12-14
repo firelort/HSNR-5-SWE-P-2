@@ -1,0 +1,60 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLSpecialState</id><coordinates><x>894</x><y>100</y><w>20</w><h>20</h></coordinates><panel_attributes>type=initial</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>894</x><y>110</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=-&gt;</panel_attributes><additional_attributes>10;10;10;40</additional_attributes></element><element><id>UMLState</id><coordinates><x>854</x><y>150</y><w>100</w><h>40</h></coordinates><panel_attributes>Startseite</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>894</x><y>180</y><w>80</w><h>90</h></coordinates><panel_attributes>E-Mail
+Eingabe
+lt=-&gt;</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>UMLState</id><coordinates><x>984</x><y>350</y><w>100</w><h>40</h></coordinates><panel_attributes>Login-
+seite</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLSpecialState</id><coordinates><x>884</x><y>250</y><w>40</w><h>40</h></coordinates><panel_attributes>type=decision</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>784</x><y>250</y><w>120</w><h>40</h></coordinates><panel_attributes>lt=-&gt;
+Mitarbeiter</panel_attributes><additional_attributes>100;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>914</x><y>250</y><w>120</w><h>40</h></coordinates><panel_attributes>lt=-&gt;
+Absolvent</panel_attributes><additional_attributes>10;20;100;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1024</x><y>280</y><w>80</w><h>90</h></coordinates><panel_attributes>Passwort
+gesetzt
+lt=-&gt;</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>UMLSpecialState</id><coordinates><x>1014</x><y>250</y><w>40</w><h>40</h></coordinates><panel_attributes>type=decision</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1044</x><y>250</y><w>140</w><h>50</h></coordinates><panel_attributes>Passwort noch
+nicht gesetzt
+lt=-&gt;</panel_attributes><additional_attributes>10;20;120;20</additional_attributes></element><element><id>UMLState</id><coordinates><x>1164</x><y>250</y><w>90</w><h>40</h></coordinates><panel_attributes>Passwort-
+setzen</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLSpecialState</id><coordinates><x>1014</x><y>440</y><w>40</w><h>40</h></coordinates><panel_attributes>type=decision</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1024</x><y>380</y><w>90</w><h>80</h></coordinates><panel_attributes>lt=-&gt;
+Einloggen</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>1044</x><y>360</y><w>130</w><h>120</h></coordinates><panel_attributes>lt=-&gt;
+Falsches
+Passwort</panel_attributes><additional_attributes>10;100;60;100;60;10;40;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1024</x><y>470</y><w>80</w><h>90</h></coordinates><panel_attributes>lt=-&gt;
+Richtiges
+Passwort</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>UMLState</id><coordinates><x>974</x><y>540</y><w>120</w><h>40</h></coordinates><panel_attributes>Formular
+Teilnahmepflegen</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>894</x><y>540</y><w>100</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+Speichern</panel_attributes><additional_attributes>80;10;10;10;10;30;80;30</additional_attributes></element><element><id>Relation</id><coordinates><x>1084</x><y>280</y><w>200</w><h>300</h></coordinates><panel_attributes>lt=-&gt;
+Passwort
+gesetzt</panel_attributes><additional_attributes>130;10;130;280;10;280</additional_attributes></element><element><id>UMLSpecialState</id><coordinates><x>754</x><y>250</y><w>40</w><h>40</h></coordinates><panel_attributes>type=decision</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>764</x><y>280</y><w>110</w><h>90</h></coordinates><panel_attributes>lt=-&gt;
+Account nicht
+vorhanden</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>424</x><y>250</y><w>350</w><h>50</h></coordinates><panel_attributes>lt=-&gt;
+Account
+vorhanden</panel_attributes><additional_attributes>330;20;10;20</additional_attributes></element><element><id>UMLState</id><coordinates><x>734</x><y>540</y><w>90</w><h>40</h></coordinates><panel_attributes>Anmeldung &amp;
+Registrierung</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLSpecialState</id><coordinates><x>394</x><y>250</y><w>40</w><h>40</h></coordinates><panel_attributes>type=decision</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLSpecialState</id><coordinates><x>754</x><y>350</y><w>40</w><h>40</h></coordinates><panel_attributes>type=decision</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>404</x><y>280</y><w>100</w><h>90</h></coordinates><panel_attributes>lt=-&gt;
+Bereits
+angemeldet</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>264</x><y>250</y><w>150</w><h>50</h></coordinates><panel_attributes>lt=-&gt;
+Nocht nicht
+angemeldet</panel_attributes><additional_attributes>130;20;10;20</additional_attributes></element><element><id>UMLState</id><coordinates><x>544</x><y>350</y><w>100</w><h>40</h></coordinates><panel_attributes>Registrierung</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>764</x><y>380</y><w>100</w><h>180</h></coordinates><panel_attributes>lt=-&gt;
+Noch nicht
+angemeldet</panel_attributes><additional_attributes>10;10;10;160</additional_attributes></element><element><id>Relation</id><coordinates><x>634</x><y>350</y><w>140</w><h>50</h></coordinates><panel_attributes>lt=-&gt;
+Bereits
+angemeldet</panel_attributes><additional_attributes>120;20;10;20</additional_attributes></element><element><id>UMLState</id><coordinates><x>174</x><y>250</y><w>100</w><h>40</h></coordinates><panel_attributes>Anmeldung &amp;
+Login</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>364</x><y>350</y><w>100</w><h>40</h></coordinates><panel_attributes>Login</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLSpecialState</id><coordinates><x>394</x><y>450</y><w>40</w><h>40</h></coordinates><panel_attributes>type=decision</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>404</x><y>380</y><w>90</w><h>90</h></coordinates><panel_attributes>lt=-&gt;
+Einloggen</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>334</x><y>360</y><w>80</w><h>130</h></coordinates><panel_attributes>lt=-&gt;
+Falsches
+Passwort</panel_attributes><additional_attributes>60;110;10;110;10;10;30;10</additional_attributes></element><element><id>UMLSpecialState</id><coordinates><x>204</x><y>450</y><w>40</w><h>40</h></coordinates><panel_attributes>type=decision</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>214</x><y>280</y><w>90</w><h>190</h></coordinates><panel_attributes>lt=-&gt;
+Einloggen</panel_attributes><additional_attributes>10;10;10;170</additional_attributes></element><element><id>UMLState</id><coordinates><x>244</x><y>560</y><w>120</w><h>60</h></coordinates><panel_attributes>ASF
+Backend
+symbol=substate</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>214</x><y>480</y><w>110</w><h>100</h></coordinates><panel_attributes>lt=-&gt;
+Richtiges
+Passwort</panel_attributes><additional_attributes>10;10;10;40;90;40;90;80</additional_attributes></element><element><id>Relation</id><coordinates><x>294</x><y>480</y><w>140</w><h>100</h></coordinates><panel_attributes>lt=-&gt;
+Richtiges
+Passwort</panel_attributes><additional_attributes>120;10;120;40;10;40;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>144</x><y>270</y><w>80</w><h>220</h></coordinates><panel_attributes>lt=-&gt;
+Falsches
+Passwort</panel_attributes><additional_attributes>60;200;10;200;10;10;30;10</additional_attributes></element><element><id>Relation</id><coordinates><x>54</x><y>250</y><w>420</w><h>450</h></coordinates><panel_attributes>lt=-&gt;
+Anmeldung</panel_attributes><additional_attributes>120;10;10;10;10;430;400;430</additional_attributes></element><element><id>UMLState</id><coordinates><x>454</x><y>660</y><w>90</w><h>40</h></coordinates><panel_attributes>Formular
+Anmeldung</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>354</x><y>380</y><w>320</w><h>230</h></coordinates><panel_attributes>lt=-&gt;
+Erfolgreich
+registiert</panel_attributes><additional_attributes>240;10;240;210;10;210</additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>570</y><w>340</w><h>130</h></coordinates><panel_attributes>lt=-&gt;
+Anmeldung</panel_attributes><additional_attributes>250;10;250;110;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>690</y><w>90</w><h>80</h></coordinates><panel_attributes>lt=-&gt;
+Speichern</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>UMLSpecialState</id><coordinates><x>490</x><y>750</y><w>20</w><h>20</h></coordinates><panel_attributes>type=final</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>0</x><y>160</y><w>870</w><h>450</h></coordinates><panel_attributes>lt=-&gt;
+Logout</panel_attributes><additional_attributes>240;430;10;430;10;10;850;10</additional_attributes></element><element><id>Relation</id><coordinates><x>950</x><y>160</y><w>360</w><h>500</h></coordinates><panel_attributes>lt=-&gt;
+Logout</panel_attributes><additional_attributes>80;420;80;480;340;480;340;10;10;10</additional_attributes></element><element><id>Text</id><coordinates><x>1320</x><y>180</y><w>280</w><h>70</h></coordinates><panel_attributes>Legende:
+Anmeldung -&gt; Kommen zur Absolventenfeier
+Login -&gt; Login am AFS
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>0</x><y>80</y><w>1510</w><h>700</h></coordinates><panel_attributes>symbol=substate</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>20</x><y>90</y><w>280</w><h>70</h></coordinates><panel_attributes>Absolventenfeiersystem (AFS)
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>250</x><y>610</y><w>120</w><h>70</h></coordinates><panel_attributes>lt=-&gt;
+Kategorie
+ändern</panel_attributes><additional_attributes>100;10;100;40;10;40;10;10</additional_attributes></element></diagram>
