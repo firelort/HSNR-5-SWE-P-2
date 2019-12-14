@@ -371,7 +371,7 @@ Eine Übersicht der registrierten Benutzer des AFS, diese Mitglieder können gel
 
 ### Klassenmodell
 
-_Geben Sie hier UML-Klassendiagramme an und erläutern Sie diese._
+![[21] Klassendiagramm](images/uml/uml-classes-v2.png "Klassendiagramm")
 
 ### Nutzung MongoDB
 
