@@ -373,9 +373,102 @@ Eine Übersicht der registrierten Benutzer des AFS, diese Mitglieder können gel
 
 ![[21] Klassendiagramm](images/uml/uml-classes-v2.png "Klassendiagramm")
 
+
+:(feier)\: Zusammenstellung Attribute
+
++----------+--------+------------------------------------------------------------+
+| Attribut |  Typ   |     Beschreibung                                           |
++==========+========+============================================================+
+| name     | string | Der Name der Absolventenfeier                              |
++----------+--------+------------------------------------------------------------+
+| datum    | date   | Das Datum der Absolventenfeier                             |
++----------+--------+------------------------------------------------------------+
+| uhrzeit  | time   | Die Uhrzeit der Absolventenfeier                           |
++----------+--------+------------------------------------------------------------+
+| ort      | string | Der Standort der Absolventenfeier                          |
++----------+--------+------------------------------------------------------------+
+
+:(absolventen_in)\: Zusammenstellung Attribute
+
++---------------------+---------+------------------------------------------------------------+
+| Attribut            |  Typ    |     Beschreibung                                           |
++=====================+=========+============================================================+
+| absolventen_ex      | number  | ID des externen Datensatzes, der zu diesen                 |
+|                     |         | Zusatzinformationen gehört                                 |
++---------------------+---------+------------------------------------------------------------+
+| passwort            | string  | Passwort zur Anmeldung im ASF - Leerstring, wenn noch      |
+|                     |         | nicht erstellt                                             |
++---------------------+---------+------------------------------------------------------------+
+| teilnahmestatus     | boolean | Teilnahmestatus, ob Teilnahme bestätigt                    |
++---------------------+---------+------------------------------------------------------------+
+| anzahlBegleitperson | number  | Anzahl der Begleitpersonen des Absolventen                 |
++---------------------+---------+------------------------------------------------------------+
+
+:(mitarbeiter)\: Zusammenstellung Attribute
+
++----------+--------+------------------------------------------------------------+
+| Attribut |  Typ   |     Beschreibung                                           |
++==========+========+============================================================+
+| name     | string | Nachname des Mitarbeiters                                  |
++----------+--------+------------------------------------------------------------+
+| vorname  | string | Vorname des Mitarbeiters                                   |
++----------+--------+------------------------------------------------------------+
+| email    | string | E-Mail des Mitarbeiters                                    |
++----------+--------+------------------------------------------------------------+
+
+:(zugangsdaten)\: Zusammenstellung Attribute
+
++----------+--------+------------------------------------------------------------+
+| Attribut |  Typ   |     Beschreibung                                           |
++==========+========+============================================================+
+| name     | string | Nachname des Prüfungsausschussmitglieds                    |
++----------+--------+------------------------------------------------------------+
+| vorname  | string | Vorname des Prüfungsausschussmitglieds                     |
++----------+--------+------------------------------------------------------------+
+| email    | string | E-Mail des Prüfungsausschussmitglieds                      |
++----------+--------+------------------------------------------------------------+
+| passwort | string | Passwort des Prüfungsausschussmitglieds                    |
++----------+--------+------------------------------------------------------------+
+
+:(absolventen_ex)\: Zusammenstellung Attribute
+
++--------------+--------+------------------------------------------------------------+
+| Attribut     |  Typ   |     Beschreibung                                           |
++==============+========+============================================================+
+| name         | string | Nachname des Absolventen                                   |
++--------------+--------+------------------------------------------------------------+
+| vorname      | string | Vorname des Absolventen                                    |
++--------------+--------+------------------------------------------------------------+
+| email        | string | E-Mail des Absolventen                                     |
++--------------+--------+------------------------------------------------------------+
+| arbeitstitel | string | Titel der Abschlussarbeit                                  |
++--------------+--------+------------------------------------------------------------+
+| arbeitstyp   | string | Passwort des Prüfungsausschussmitglieds                    |
++--------------+--------+------------------------------------------------------------+
+| pruefer1     | string | Name des ersten Prüfers                                    |
++--------------+--------+------------------------------------------------------------+
+| pruefer2     | string | Name des zweiten Prüfers                                   |
++--------------+--------+------------------------------------------------------------+
+
 ### Nutzung MongoDB
 
-_Geben Sie hier an, wie das Klassenmodell auf Container und Referenzen zwischen den Containern abgebildet wird._
+MongoDB speichert die Daten in JSON ab. Die Object2JSON Komponente wandelt die vorhanden Instanzen in JSON um oder die JSON zurück in Instanzen der Objekte.
+Die Referenzen werden erneut gesetzt.
+
+Die Felder in JSON besitzen die identsichen Namen wie die Klassen, Beispiel für ein Objekt in JSON:
+
+```
+{
+    "name": "Mueller",
+    "vorname": "Marius",
+    "email": "marius@mueller.de",
+    "arbeitstitel": "Thema 1",
+    "arbeitstyp": "Bachelor",
+    "pruefer1": "Prof A",
+    "pruefer2": "Prof C" 
+}
+```
+
 
 ## Verwendung von Entwufsmustern
 
