@@ -289,7 +289,19 @@ _Geben Sie die Elemente der Benutzungsschnittstelle an; verwenden Sie Wireframes
 
 ## Systemverhalten
 
-_Geben Sie hier UML-Sequenz- und/oder UML-Zustands- und/oder UML-Aktivitätsdiagramme_ an.
+### UML Zustandsdiagramme
+
+#### Übersicht
+
+![[3] Übersicht UML-Zustandsdiagramm-Diagramm für Absolventenfeiersystem](übersicht-state.png "Übersicht Zustandsdiagramm")
+
+#### Absolventenfeiersystem (ASF)
+
+![[4] ASF UML-Zustandsdiagramm-Diagramm für Absolventenfeiersystem](app-state.png "ASF-Zustandsdiagramm")
+
+#### ASF Backend
+
+![[4] ASF-Backend UML-Zustandsdiagramm-Diagramm für Absolventenfeiersystem](asf-state.png "ASF-Backend-Zustandsdiagramm")
 
 ## Datenbasis
 
