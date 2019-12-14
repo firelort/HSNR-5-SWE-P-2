@@ -48,73 +48,6 @@ Komponenten bieten verschiedene Export- und Import-Schittstellen an, welche im f
 
 ### Benutzungsschnittstelle
 
-In den folgenen Frames steht "Benutzername" als Platzhalter für den für den Namen des angemeldeten Nutzers, "Absolventenfeier" steht für den Namen der aktuellen Feier.
-LOGO/TITLE im AFS werden durch das Logo bzw einen stellvertretenden Text ersetzt.
-
-![[3] Login-Maske für alle Benutzer/Teilnehmer](images/wireframes/login_step_1.png "Login-Maske")
-
-Diese Maske wird als globaler Login genutzt, jenachdem welche Email-Adresse eingegeben wird, wird die nächste Eingabe Maske angezeigt.
-Dort wird unterschieden zwischen Mitarbeiter und Absolventen.
-
-![[4] Maske zum Setzen eines Passwortes für Absolventen](images/wireframes/login_step_2_password_not_set_student.png "Passwort-Maske")
-
-Wenn der Absolvent noch kein Password für seine Email gesetzt hat, muss er das in dieser Maske tun.
-
-![[5] Maske zur Eingabe des Passwortes für Absolventen](images/wireframes/login_step_2_password_already_set_student.png "Passwort-Maske")
-
-Wenn ein Passwort für den Absolventen hinterlegt ist, kann dieser sich damit in dieser Maske anzumelden.
-
-![[6] Maske zur Bekundung der Teilnahme für Absolventen](images/wireframes/participate_not_participating.png "Maske zur Teilnahmebekundung - Absolventen")
-
-Nach dem erfolgreichen Login besteht die Möglichkeit die Teilnahme an der Absolventenfeier zu bekunden und die Anzahl der Begleitpersonen anzugeben.
-
-![[7] Maske zur Stornierung der Teilnahme für Absolventen und Änderungen der Anzahl der Begleitpersonen](images/wireframes/participate_participating.png "Maske zur Teilnahmebekundung - Absolventen")
-
-Nach Bekundung der Teilnahme steht Absolventen nach dem Login die Möglichkeit zur Verfügung die Anzahl der Begleitpersonen zu ändern oder die Teilnahme zu stornieren.
-
-![[8] Maske zur Bekundung der Teilnahme für Mitarbeiter, sowie Registrierung für Mitarbeiter am AFS](images/wireframes/login_step_2_account_not_set_not_participating_worker.png "Maske zur Teilnahmebekundung/Registrierung am AFS - Mitarbeiter")
-
-Wenn ein Mitarbeiter sich weder am AFS angemeldet hat, noch seine Teilnahme zur Absolventenfeier bekundet hat kann er diese Vorgänge in dieser Maske vollenden.
-
-![[9] Status zur Teilnahme, sowie Registrierung für Mitarbeiter am AFS](images/wireframes/login_step_2_account_not_set_participating_worker.png "Maske zur Teilnahmebekundung/Registrierung am AFS - Mitarbeiter")
-
-Falls noch kein AFS-Account besteht aber die Teilnahme bereits bekundet wurde, wird die Maske zur Bekundung durch einen Statustext ersetzt.
-
-![[10] Maske zur Bekundung der Teilnahme für Mitarbeiter und Login zum AFS](images/wireframes/login_step_2_account_set_not_participating_worker.png "Maske zur Teilnahmebekundung sowie Login - Mitarbeiter")
-
-Besteht bereits ein Account, wird die Registrierung mit einem Login getauscht, bei Nicht-Teilnahme wird zusätzlich die Maske zur Teilnahmebekundung angezeigt.
-
-![[11] Status zur Teilnahme, sowie Login zum AFS](images/wireframes/login_step_2_account_set_participating_worker.png "Status zur Teilnahmebekundung sowie Login - Mitarbeiter")
-
-Bei bestehen Account und bekundeter Teilnahme wird die Loginmaske angezeigt und der Status der Teilnahme.
-
-![[12] Template für das AFS](images/wireframes/dashboard/template.png "Template AFS")
-
-Dieses Template wird für jede Unterseite des AFS benutzt, welche sich im passwortgeschützten Bereich befindet.
-Ein Klick auf den Benutzernamen öffnet ein Untermenü, das die Option zur Abmeldung beinhaltet.
-
-![[13] Maske zur Erstellung/Änderungen der Absolventenfeier](images/wireframes/dashboard/gc_createedit.png "Maske der Absolventenfeier")
-
-Die Maske zur Bearbeitung und Erstellung einer neuen Absolventenfeier ist identisch bisauf die Begriffe "anlegen" und "bearbeiten" werden entsprechend getauscht.
-Falls eine Absolventenfeier bearbeitet wird sind die Felder vorbelegt mit den vorhandenen Daten.
-
-![[14] Tabelle zur Betrachtung der Mitglieder des Prüfungsausschusses mit der Option der Löschung](images/wireframes/dashboard/user.png "Tabelle der Benutzer")
-
-Eine Übersicht der registrierten Benutzer des AFS, diese Mitglieder können gelöscht werden bei Bedarf.
-
-![[15] Tabelle zur Betrachtung der Abschlussarbeiten, sortierbar](images/wireframes/dashboard/thesis_.png "Tabelle der Abschlussarbeiten")
-
-Übersicht der Abschlussarbeiten, die Kombobox ermöglicht den Wechsel der Sortierung.
-
-![[16] Tabelle zur Betrachtung der Teilneher - Absolventen](images/wireframes/dashboard/participants_students.png "Tabelle der Teilnehmer - Absolventen")
-
-Übersicht der angemeldeten Absolventen.
-
-![[17] Tabelle zur Betrachtung der Teilneher - Mitarbeiter](images/wireframes/dashboard/participants_worker.png "Tabelle der Teilnehmer - Mitarbeiter")
-
-Übersicht der angemelden Mitarbeiter.
-
-
 #### Webbrowser
 
 Der Webbrowser wird genutzt, damit die Nutzer die Applikation verwenden können. Der Browser muss HTML und CSS anzeigen können.
@@ -352,7 +285,71 @@ Persistenzschicht weiter gegeben werden.
 
 ## Benutzungsschnittstelle
 
+In den folgenen Frames steht "Benutzername" als Platzhalter für den für den Namen des angemeldeten Nutzers, "Absolventenfeier" steht für den Namen der aktuellen Feier.
+LOGO/TITLE im AFS werden durch das Logo bzw einen stellvertretenden Text ersetzt.
 
+![[3] Login-Maske für alle Benutzer/Teilnehmer](images/wireframes/login_step_1.png "Login-Maske")
+
+Diese Maske wird als globaler Login genutzt, jenachdem welche Email-Adresse eingegeben wird, wird die nächste Eingabe Maske angezeigt.
+Dort wird unterschieden zwischen Mitarbeiter und Absolventen.
+
+![[4] Maske zum Setzen eines Passwortes für Absolventen](images/wireframes/login_step_2_password_not_set_student.png "Passwort-Maske")
+
+Wenn der Absolvent noch kein Password für seine Email gesetzt hat, muss er das in dieser Maske tun.
+
+![[5] Maske zur Eingabe des Passwortes für Absolventen](images/wireframes/login_step_2_password_already_set_student.png "Passwort-Maske")
+
+Wenn ein Passwort für den Absolventen hinterlegt ist, kann dieser sich damit in dieser Maske anzumelden.
+
+![[6] Maske zur Bekundung der Teilnahme für Absolventen](images/wireframes/participate_not_participating.png "Maske zur Teilnahmebekundung - Absolventen")
+
+Nach dem erfolgreichen Login besteht die Möglichkeit die Teilnahme an der Absolventenfeier zu bekunden und die Anzahl der Begleitpersonen anzugeben.
+
+![[7] Maske zur Stornierung der Teilnahme für Absolventen und Änderungen der Anzahl der Begleitpersonen](images/wireframes/participate_participating.png "Maske zur Teilnahmebekundung - Absolventen")
+
+Nach Bekundung der Teilnahme steht Absolventen nach dem Login die Möglichkeit zur Verfügung die Anzahl der Begleitpersonen zu ändern oder die Teilnahme zu stornieren.
+
+![[8] Maske zur Bekundung der Teilnahme für Mitarbeiter, sowie Registrierung für Mitarbeiter am AFS](images/wireframes/login_step_2_account_not_set_not_participating_worker.png "Maske zur Teilnahmebekundung/Registrierung am AFS - Mitarbeiter")
+
+Wenn ein Mitarbeiter sich weder am AFS angemeldet hat, noch seine Teilnahme zur Absolventenfeier bekundet hat kann er diese Vorgänge in dieser Maske vollenden.
+
+![[9] Status zur Teilnahme, sowie Registrierung für Mitarbeiter am AFS](images/wireframes/login_step_2_account_not_set_participating_worker.png "Maske zur Teilnahmebekundung/Registrierung am AFS - Mitarbeiter")
+
+Falls noch kein AFS-Account besteht aber die Teilnahme bereits bekundet wurde, wird die Maske zur Bekundung durch einen Statustext ersetzt.
+
+![[10] Maske zur Bekundung der Teilnahme für Mitarbeiter und Login zum AFS](images/wireframes/login_step_2_account_set_not_participating_worker.png "Maske zur Teilnahmebekundung sowie Login - Mitarbeiter")
+
+Besteht bereits ein Account, wird die Registrierung mit einem Login getauscht, bei Nicht-Teilnahme wird zusätzlich die Maske zur Teilnahmebekundung angezeigt.
+
+![[11] Status zur Teilnahme, sowie Login zum AFS](images/wireframes/login_step_2_account_set_participating_worker.png "Status zur Teilnahmebekundung sowie Login - Mitarbeiter")
+
+Bei bestehen Account und bekundeter Teilnahme wird die Loginmaske angezeigt und der Status der Teilnahme.
+
+![[12] Template für das AFS](images/wireframes/dashboard/template.png "Template AFS")
+
+Dieses Template wird für jede Unterseite des AFS benutzt, welche sich im passwortgeschützten Bereich befindet.
+Ein Klick auf den Benutzernamen öffnet ein Untermenü, das die Option zur Abmeldung beinhaltet.
+
+![[13] Maske zur Erstellung/Änderungen der Absolventenfeier](images/wireframes/dashboard/gc_createedit.png "Maske der Absolventenfeier")
+
+Die Maske zur Bearbeitung und Erstellung einer neuen Absolventenfeier ist identisch bisauf die Begriffe "anlegen" und "bearbeiten" werden entsprechend getauscht.
+Falls eine Absolventenfeier bearbeitet wird sind die Felder vorbelegt mit den vorhandenen Daten.
+
+![[14] Tabelle zur Betrachtung der Mitglieder des Prüfungsausschusses mit der Option der Löschung](images/wireframes/dashboard/user.png "Tabelle der Benutzer")
+
+Eine Übersicht der registrierten Benutzer des AFS, diese Mitglieder können gelöscht werden bei Bedarf.
+
+![[15] Tabelle zur Betrachtung der Abschlussarbeiten, sortierbar](images/wireframes/dashboard/thesis_.png "Tabelle der Abschlussarbeiten")
+
+Übersicht der Abschlussarbeiten, die Kombobox ermöglicht den Wechsel der Sortierung.
+
+![[16] Tabelle zur Betrachtung der Teilneher - Absolventen](images/wireframes/dashboard/participants_students.png "Tabelle der Teilnehmer - Absolventen")
+
+Übersicht der angemeldeten Absolventen.
+
+![[17] Tabelle zur Betrachtung der Teilneher - Mitarbeiter](images/wireframes/dashboard/participants_worker.png "Tabelle der Teilnehmer - Mitarbeiter")
+
+Übersicht der angemelden Mitarbeiter.
 
 ## Systemverhalten
 
@@ -360,15 +357,15 @@ Persistenzschicht weiter gegeben werden.
 
 #### Übersicht
 
-![[3] Übersicht UML-Zustandsdiagramm-Diagramm für Absolventenfeiersystem](images/uml/übersicht-state.png "Übersicht Zustandsdiagramm")
+![[18] Übersicht UML-Zustandsdiagramm-Diagramm für Absolventenfeiersystem](images/uml/übersicht-state.png "Übersicht Zustandsdiagramm")
 
 #### Absolventenfeiersystem (ASF)
 
-![[4] ASF UML-Zustandsdiagramm-Diagramm für Absolventenfeiersystem](images/uml/app-state.png "ASF-Zustandsdiagramm")
+![[19] ASF UML-Zustandsdiagramm-Diagramm für Absolventenfeiersystem](images/uml/app-state.png "ASF-Zustandsdiagramm")
 
 #### ASF Backend
 
-![[4] ASF-Backend UML-Zustandsdiagramm-Diagramm für Absolventenfeiersystem](images/uml/asf-state.png "ASF-Backend-Zustandsdiagramm")
+![[20] ASF-Backend UML-Zustandsdiagramm-Diagramm für Absolventenfeiersystem](images/uml/asf-state.png "ASF-Backend-Zustandsdiagramm")
 
 ## Datenbasis
 
