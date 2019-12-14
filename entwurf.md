@@ -11,7 +11,7 @@ revision:
    level: 0
    date: 11.12.2019
 lang: de
-cssextra: doc1.css
+cssextra: assets/doc1.css
 ---
 
 # Allgemeine Beschreibung
@@ -28,7 +28,7 @@ Adapter von Prüfungsamt bezogen.
 
 ### Übersicht
 
-![[1] Übersicht UML-Komponenten-Diagramm für Absolventenfeiersystem](übersicht-komponenten.png "Übersicht über die Komponenten")
+![[1] Übersicht UML-Komponenten-Diagramm für Absolventenfeiersystem](images/uml/übersicht-komponenten.png "Übersicht über die Komponenten")
 
 Die Benutzungsschnittstelle greift auf Funktionen der Applikationslogik zu um Daten an die Applikation zu senden.
 Desweitern erfolgt das Rendern der HTML-Seite auf dem Server, sodass der Client/Web-Browser auch auf diese Funktionalität
@@ -39,7 +39,7 @@ Die Persistenzsicht dient als Mediator zwischen Applikationslogik und Datenbank 
 
 ### Applikationslogik verfeinert
 
-![[2] Applikationslogik UML-Komponenten-Diagramm für Absolventenfeiersystem](app-komponenten.png "Übersicht über die Applikationslogik")
+![[2] Applikationslogik UML-Komponenten-Diagramm für Absolventenfeiersystem](images/uml/app-komponenten.png "Übersicht über die Applikationslogik")
 
 Die Applikationslogik ist im oberen Bild verfeinert, da diese in der Übersicht nur grob eingezeicht ist. Die vier verschiedenen
 Komponenten bieten verschiedene Export- und Import-Schittstellen an, welche im folgenden genauer erklärt werden.
@@ -293,15 +293,15 @@ _Geben Sie die Elemente der Benutzungsschnittstelle an; verwenden Sie Wireframes
 
 #### Übersicht
 
-![[3] Übersicht UML-Zustandsdiagramm-Diagramm für Absolventenfeiersystem](übersicht-state.png "Übersicht Zustandsdiagramm")
+![[3] Übersicht UML-Zustandsdiagramm-Diagramm für Absolventenfeiersystem](images/uml/übersicht-state.png "Übersicht Zustandsdiagramm")
 
 #### Absolventenfeiersystem (ASF)
 
-![[4] ASF UML-Zustandsdiagramm-Diagramm für Absolventenfeiersystem](app-state.png "ASF-Zustandsdiagramm")
+![[4] ASF UML-Zustandsdiagramm-Diagramm für Absolventenfeiersystem](images/uml/app-state.png "ASF-Zustandsdiagramm")
 
 #### ASF Backend
 
-![[4] ASF-Backend UML-Zustandsdiagramm-Diagramm für Absolventenfeiersystem](asf-state.png "ASF-Backend-Zustandsdiagramm")
+![[4] ASF-Backend UML-Zustandsdiagramm-Diagramm für Absolventenfeiersystem](images/uml/asf-state.png "ASF-Backend-Zustandsdiagramm")
 
 ## Datenbasis
 
