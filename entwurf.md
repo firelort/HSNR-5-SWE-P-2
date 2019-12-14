@@ -49,6 +49,7 @@ Komponenten bieten verschiedene Export- und Import-Schittstellen an, welche im f
 ### Benutzungsschnittstelle
 
 In den folgenen Frames steht "Benutzername" als Platzhalter für den für den Namen des angemeldeten Nutzers, "Absolventenfeier" steht für den Namen der aktuellen Feier.
+LOGO/TITLE im AFS werden durch das Logo bzw einen stellvertretenden Text ersetzt.
 
 ![[3] Login-Maske für alle Benutzer/Teilnehmer](images/wireframes/login_step_1.png "Login-Maske")
 
@@ -86,6 +87,33 @@ Besteht bereits ein Account, wird die Registrierung mit einem Login getauscht, b
 ![[11] Status zur Teilnahme, sowie Login zum AFS](images/wireframes/login_step_2_account_set_participating_worker.png "Status zur Teilnahmebekundung sowie Login - Mitarbeiter")
 
 Bei bestehen Account und bekundeter Teilnahme wird die Loginmaske angezeigt und der Status der Teilnahme.
+
+![[12] Template für das AFS](images/wireframes/dashboard/template.png "Template AFS")
+
+Dieses Template wird für jede Unterseite des AFS benutzt, welche sich im passwortgeschützten Bereich befindet.
+Ein Klick auf den Benutzernamen öffnet ein Untermenü, das die Option zur Abmeldung beinhaltet.
+
+![[13] Maske zur Erstellung/Änderungen der Absolventenfeier](images/wireframes/dashboard/gc_createedit.png "Maske der Absolventenfeier")
+
+Die Maske zur Bearbeitung und Erstellung einer neuen Absolventenfeier ist identisch bisauf die Begriffe "anlegen" und "bearbeiten" werden entsprechend getauscht.
+Falls eine Absolventenfeier bearbeitet wird sind die Felder vorbelegt mit den vorhandenen Daten.
+
+![[14] Tabelle zur Betrachtung der Mitglieder des Prüfungsausschusses mit der Option der Löschung](images/wireframes/dashboard/user.png "Tabelle der Benutzer")
+
+Eine Übersicht der registrierten Benutzer des AFS, diese Mitglieder können gelöscht werden bei Bedarf.
+
+![[15] Tabelle zur Betrachtung der Abschlussarbeiten, sortierbar](images/wireframes/dashboard/thesis_.png "Tabelle der Abschlussarbeiten")
+
+Übersicht der Abschlussarbeiten, die Kombobox ermöglicht den Wechsel der Sortierung.
+
+![[16] Tabelle zur Betrachtung der Teilneher - Absolventen](images/wireframes/dashboard/participants_students.png "Tabelle der Teilnehmer - Absolventen")
+
+Übersicht der angemeldeten Absolventen.
+
+![[17] Tabelle zur Betrachtung der Teilneher - Mitarbeiter](images/wireframes/dashboard/participants_worker.png "Tabelle der Teilnehmer - Mitarbeiter")
+
+Übersicht der angemelden Mitarbeiter.
+
 
 #### Webbrowser
 
